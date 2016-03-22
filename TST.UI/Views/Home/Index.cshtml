@@ -1,31 +1,202 @@
 ﻿@{
-    ViewBag.Title = "Home Page";
+    ViewBag.Title = "Home";
 }
 
-<div class="jumbotron">
-    <h1>ASP.NET</h1>
-    <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
-    <p><a href="http://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
+<div id="welcome">
+    <div class="megatron flexbox">
+        <div class="flexitem">
+            <div class="banner">
+                Ticket Support Tracker
+                <h1 class="h1">Internal Techical Ticket Support Tracker Application<br />Built in ASP.NET using MVC architecture.</h1>
+            </div>
+        </div>
+    </div>
 </div>
+<section id="Team">
+    <div class="minitron">
+        <div class="container">
+            <div>
+                <h1 class="h1">Application Requirements</h1>
+                <!-- Nav tabs -->
+                <ul class="nav nav-tabs" role="tablist">
+                    <li role="presentation" class="active show"><a href="#Intro" aria-controls="Intro" role="tab" data-toggle="tab">Intro</a></li>
+                    <li role="presentation"><a href="#About" aria-controls="About" role="tab" data-toggle="tab">About</a></li>
+                    <li role="presentation"><a href="#Requirements" aria-controls="Requirements" role="tab" data-toggle="tab">Requirments</a></li>
+                    <li role="presentation"><a href="#Notes" aria-controls="Notes" role="tab" data-toggle="tab">Notes from Project Manager</a></li>
+                
+                </ul>
 
-<div class="row">
-    <div class="col-md-4">
-        <h2>Getting started</h2>
-        <p>
-            ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-            enables a clean separation of concerns and gives you full control over markup
-            for enjoyable, agile development.
-        </p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
+                <!-- Tab panes -->
+                <div class="tab-content jumbotron">
+                    <div role="tabpanel" class="tab-pane active jumbotron" id="Intro"><h2>&quot;This project has been designed to utilize the majority of skills that you have learned up to this point.  The core of this project is an ASP.NET MVC 5 website that utilizes EF to manage/persist trouble ticket data, and to track any employee and status changes for these tickets.&quot;</h2></div>
+                    <div role="tabpanel" class="tab-pane jumbotron" id="About"><h2> &quot;The ticket tracker is assumed to be an internal system (intranet) for a company to manage trouble tickets.  Because it is internal, unathenticated users should be allowed to see trouble ticket index and details information (non-resolved tickets only). If this were an external website (internet), the access information would be different.&quot;</h2></div>
+                    <div role="tabpanel" class="tab-pane list-group" id="Requirements">
+                        <h3 class="h3">The minimum requirements for this project are as follows:</h3>
+                        <br />
+                        <h3 class="h3">Manage Departments:</h3>
+                        <ul>
+                            <li class="list-group-item">Only available to admin users</li>
+                            <li class="list-group-item">Index view should show all departments</li>
+                            <li class="list-group-item">CRUD functionality (Soft Delete)</li>
+                        </ul>
+                        <br />
+                        <h3 class="h3">Manage Employees:</h3>
+                        <ul>
+                            <li class="list-group-item">Only available to admin users</li>
+                            <li class="list-group-item">index view should be set to only active employees, but be filterable to inactive employees(Extra)</li>
+                            <li class="list-group-item">CRUD functionality (Soft Delete)</li>
+                        </ul>
+                        <br />
+                        <h3 class="h3">Support Tickets:</h3>
+                        <ul>
+                            <li class="list-group-item">Index view should be set to only “open” (pending & In Process) requests</li>
+                            <li class="list-group-item"> Anonymous users can only view index/detail views in read-only mode</li>
+                            <li class="list-group-item">If logged in, a user can insert new request (but may not edit)</li>
+                            <li class="list-group-item">Authenticated users should be able to filter between either Open (Pending or In Process) and Resolved Requests (Extra)</li>
+                            <li class="list-group-item">If logged in as an Administrator or Tech, users should be able to access edit functionality in detail view and toggle status between Resolved and In Process from Index view</li>
+                            <li class="list-group-item">CRUD functionality (Soft Delete)</li>
+                        </ul>
+                        <br />
+                        <br />
+                        <h3 class="h3"> All NEW Support requests should:</h3>
+                        <ul>
+                            <li class="list-group-item">Be in Pending Status automatically. (No user activity/selection)</li>
+                            <li class="list-group-item">Have a null closed date</li>
+                            <li class="list-group-item">Should NOT be able to see the Tech Notes field</li>
+                            <li class="list-group-item">Allow for null tech id in the creation</li>
+                        </ul>
+                        <br />
+                        The only viewable fields for Authenticated NON ADMIN users should be the RequestingEmployee and Requestor Notes.
+                    </div>
+                    <div role="tabpanel" class="tab-pane" id="Notes">
+                        <h3 class="h3">Notes from Project Manger:</h3>
+                        <ul>
+                            <li class="list-group-item">BASIC Requirements should be fulfilled BEFORE any additional functionality is added</li>
+                            <li class="list-group-item">jQuery DatePicker controls should be used for any dates that are not automatically added</li>
+                            <li class="list-group-item">All non-PK ID selections for Inserting and Updating should be done with DropDown lists</li>
+                            <li class="list-group-item">Notes fields will need to be converted to Multi line text boxes</li>
+                            <li class="list-group-item">All required fields should be validated</li>
+                            <li class="list-group-item">Once you have base functionality your project should be backed up and not touched</li>
+                                      </ul>
+                    </div>
+                </div>
+
+            </div>
+
+
+
+
+        </div>
     </div>
-    <div class="col-md-4">
-        <h2>Get more libraries</h2>
-        <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Web Hosting</h2>
-        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
+</section>
+
+<div id="Quote">
+    <div class="megatron flexbox">
+        <div class="flexitem">
+            <div class="container">
+                <div class="banner">Dynamic Web application</div>
+                <h1>Implements Microsofts Framework's Entity Framework<br />Authenticates users using Microsoft's Identity Framework</h1>
+            </div>
+      
+        </div>
     </div>
 </div>
+<div id="Technology">
+    <div class="minitron">
+        <div class="flexbox">
+            <div class="container">
+                <div>
+                    <h1 class="h1">Project Documentation</h1>
+                    <!-- Nav tabs -->
+                    <ul class="nav nav-tabs" role="tablist">
+                        <li role="presentation" class="active"><a href="#Wishlist" aria-controls="Wishlist" role="tab" data-toggle="tab">Future Improvements</a></li>
+                        <li role="presentation"><a href="#Schema" aria-controls="Schema" role="tab" data-toggle="tab">Database Schema</a></li>
+                        <li role="presentation"><a href="#UseCase" aria-controls="UseCase" role="tab" data-toggle="tab">Use - Case</a></li>
+                        <li role="presentation"><a href="#Design" aria-controls="Design" role="tab" data-toggle="tab">User Interface Design</a></li>
+                    </ul>
+
+                    <!-- Tab panes -->
+                    <div class="tab-content">
+                        <div role="tabpanel" class="tab-pane jumbotron list-group active" id="Wishlist">
+                            <ul>
+                                <li class="list-group-item">Calendar Functionality to track tickets</li>
+                                <li class="list-group-item">Google Calendar API IUntegration</li>
+                            </ul>
+                        </div>
+                    
+                        <div role="tabpanel" class="tab-pane flexitem" id="Schema"><img class="img-responsive" src="~/Content/Background-Images/DBSchema.png" /></div>
+
+                        <div role="tabpanel" class="tab-pane flexitem center-block" id="UseCase"><img style="margin: 0 auto;" class="img-responsive" src="~/Content/Background-Images/Use-Case.png" /></div>
+
+                        <div role="tabpanel" class="tab-pane img-responsive" style="background-size:cover; overflow:scroll; zoom:1.1;" id="Design">
+<img src="~/Content/Background-Images/Design.png" /></div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="CallToAction">
+    <div class="megatron flexbox">
+        <div class="flexitem">
+            <div class="container">
+                <h1 class="h1">“If there’s one thing you learn by working on a lot of different Web sites, it’s that almost any design idea–no matter how appallingly bad–can be made usable in the right circumstances, with enough effort.”  ― Steve Krug, Don’t Make Me Think: A Common Sense Approach to Web Usability</h1>
+            </div> 
+        </div>
+    </div>
+</div>
+<div id="AboutMVC">
+    <div class="minitron flexbox">
+        <div class="flexitem">
+            <div class="container">
+           
+            </div>
+        </div>
+    </div>
+</div>
+<div id="HomeContact">
+    <div class="megatron flexbox">
+        <div class="flexitem">
+            <div class="container">
+
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    $('#Intro a').click(function (e) {
+        e.preventDefault()
+        $(this).tab('show')
+
+    })
+    $('#About a').click(function (e) {
+        e.preventDefault()
+        $(this).tab('show')
+    })
+    $('#Requirements a').click(function (e) {
+        e.preventDefault()
+        $(this).tab('show')
+    })
+    $('#Notes a').click(function (e) {
+        e.preventDefault()
+        $(this).tab('show')
+    })
+    $('#Wishlist a').click(function (e) {
+        e.preventDefault()
+        $(this).tab('show')
+
+    })
+    $('#Schema a').click(function (e) {
+        e.preventDefault()
+        $(this).tab('show')
+    })
+    $('#UseCase a').click(function (e) {
+        e.preventDefault()
+        $(this).tab('show')
+    })
+    $('#Design a').click(function (e) {
+        e.preventDefault()
+        $(this).tab('show')
+    })
+</script>
