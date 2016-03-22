@@ -148,3 +148,5 @@ C:\Users\student\Documents\Visual Studio 2015\Projects\TST.Source\TST.UI\bin\Mic
 C:\Users\student\Documents\Visual Studio 2015\Projects\TST.Source\TST.UI\obj\Debug\TST.UI.csprojResolveAssemblyReference.cache
 C:\Users\student\Documents\Visual Studio 2015\Projects\TST.Source\TST.UI\obj\Debug\TST.UI.dll
 C:\Users\student\Documents\Visual Studio 2015\Projects\TST.Source\TST.UI\obj\Debug\TST.UI.pdb
+C:\Users\student\Documents\Visual Studio 2015\Projects\TST.Source\TST.UI\bin\TST.DAL.dll
+C:\Users\student\Documents\Visual Studio 2015\Projects\TST.Source\TST.UI\bin\TST.DAL.pdb
